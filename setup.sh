@@ -18,5 +18,5 @@ curl -fsSL https://starship.rs/install.sh | bash -s -- --yes
 curl https://getcroc.schollz.com | bash
 
 # dotfiles
-rm -rf ~/dotfiles/.git
-cp -a ~/dotfiles/. ~/
+rm -rf /workspaces/.codespaces/.persistedshare/dotfiles/.git
+cp -a /workspaces/.codespaces/.persistedshare/dotfiles/. ~/
