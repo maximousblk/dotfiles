@@ -1,0 +1,61 @@
+format = """
+$time\
+$hostname\
+$shlvl\
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$git_state\
+$package\
+$golang\
+$python\
+$rust\
+$nodejs\
+$deno\
+$custom\
+$cmd_duration\
+$status\
+$line_break\
+$character"""
+
+[time]
+disabled = false
+format = "\\[ [$time](yellow) \\] "
+time_format = "%T"
+
+[hostname]
+format = "\\[ [$hostname](green) \\] "
+ssh_only = false
+
+[directory]
+style = "cyan"
+truncation_length = 0
+
+[git_branch]
+style = "purple"
+symbol = ""
+
+[python]
+format = "[${symbol}${pyenv_prefix}${version}( \\($virtualenv\\))]($style) "
+
+[nodejs]
+detect_extensions = []
+
+[custom.deno]
+command = """ sed "s/deno //g" <<< "$(deno -V)" """
+files = ["mod.ts", "deps.ts", "mod.js", "deps.js"]
+format = "🦕 [$output](green) "
+
+[shlvl]
+disabled = false
+format = "\\[ [$shlvl]($style) \\] "
+style = "red"
+
+[status]
+disabled = false
+format = "💣 [$status](red) "
+
+[character]
+error_symbol = "[λ](red)"
+success_symbol = "[λ](white)"
