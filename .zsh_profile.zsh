@@ -18,6 +18,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # sources
-[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases.zsh # Alias definitions
-[ -f ~/.zsh_exports ] && source ~/.zsh_exports.zsh # Exports
-[ -f ~/.zsh_functions ] && source ~/.zsh_functions.zsh # Functions
+[ -f ~/.zsh_aliases.zsh ] && source ~/.zsh_aliases.zsh # Alias definitions
+[ -f ~/.zsh_exports.zsh ] && source ~/.zsh_exports.zsh # Exports
+[ -f ~/.zsh_functions.zsh ] && source ~/.zsh_functions.zsh # Functions
