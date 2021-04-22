@@ -15,3 +15,7 @@ export MANPAGER='less -X';
 # deno
 export DENO_INSTALL="$HOME/.deno";
 export PATH="$DENO_INSTALL/bin:$PATH";
+
+# fnm
+export PATH=/home/codespace/.fnm:$PATH
+eval "`fnm env`"
