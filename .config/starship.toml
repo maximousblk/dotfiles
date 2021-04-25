@@ -44,6 +44,7 @@ detect_extensions = []
 format = "$symbol [$version]($style) "
 version_format = "$raw"
 symbol = "node"
+style = "green"
 
 [custom.deno]
 command = """ sed "s/deno //g" <<< "$(deno -V)" """
