@@ -42,7 +42,7 @@ format = "[${symbol}${pyenv_prefix}${version}( \\($virtualenv\\))]($style) "
 [nodejs]
 detect_extensions = []
 format = "$symbol [$version]($style) "
-version_format = "{raw}"
+version_format = "$raw"
 symbol = "node"
 
 [custom.deno]
