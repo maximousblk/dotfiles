@@ -11,8 +11,8 @@ $package\
 $golang\
 $python\
 $rust\
-$nodejs\
 $deno\
+$nodejs\
 $custom\
 $cmd_duration\
 $status\
@@ -39,17 +39,17 @@ symbol = ""
 [python]
 format = "[${symbol}${pyenv_prefix}${version}( \\($virtualenv\\))]($style) "
 
+[deno]
+format = "$symbol[$version](green) "
+version_format = "${raw}"
+style = "green"
+
 [nodejs]
 detect_extensions = []
 format = "$symbol [$version]($style) "
 version_format = "$raw"
 symbol = "node"
 style = "green"
-
-[custom.deno]
-command = """ sed "s/deno //g" <<< "$(deno -V)" """
-files = ["mod.ts", "deps.ts", "mod.js", "deps.js"]
-format = "🦕 [$output](green) "
 
 [shlvl]
 disabled = false
