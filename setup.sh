@@ -8,15 +8,18 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 nvm install node
 nvm use --delete-prefix node
 
-# fnm
-curl -fsSL https://fnm.vercel.app/install | bash
-
 # Starship
 curl -fsSL https://starship.rs/install.sh | bash -s -- --yes
 
 # croc
-curl https://getcroc.schollz.com | bash
+curl -fsSL https://getcroc.schollz.com | bash
+
+# micro
+curl -fsSL https://getmic.ro | sh
+sudo mv micro /usr/local/bin
+
+# bit
+curl -fsSL https://gobinaries.com/chriswalz/bit | sh
 
 # dotfiles
-rm -rf /workspaces/.codespaces/.persistedshare/dotfiles/.git
-cp -a /workspaces/.codespaces/.persistedshare/dotfiles/. ~/
+$ sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply maximousblk

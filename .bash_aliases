@@ -2,7 +2,6 @@
 alias sudo='sudo '
 
 # nav
-alias ~='cd ~'
 alias ..='cd ..'
 alias -- -="cd -"
 
@@ -24,8 +23,11 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"   # List only director
 alias cls=clear
 alias where=which
 
-# misc
+# shell
 alias bashrc='vim ~/.bashrc'
+alias zshrc='code ~/.zshrc'
+
+# misc
 alias clone='gh repo clone'
 alias y=yarn
 alias c=code
