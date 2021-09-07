@@ -22,4 +22,5 @@ sudo mv micro /usr/local/bin
 curl -fsSL https://gobinaries.com/chriswalz/bit | sudo sh
 
 # dotfiles
-sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply maximousblk
+rm -rf /workspaces/.codespaces/.persistedshare/dotfiles/.git
+cp -a /workspaces/.codespaces/.persistedshare/dotfiles/. ~/
