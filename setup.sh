@@ -12,14 +12,14 @@ nvm use --delete-prefix node
 curl -fsSL https://starship.rs/install.sh | bash -s -- --yes
 
 # croc
-curl -fsSL https://getcroc.schollz.com | bash
+curl -fsSL https://getcroc.schollz.com | sudo bash
 
 # micro
 curl -fsSL https://getmic.ro | sh
 sudo mv micro /usr/local/bin
 
 # bit
-curl -fsSL https://gobinaries.com/chriswalz/bit | sh
+curl -fsSL https://gobinaries.com/chriswalz/bit | sudo sh
 
 # dotfiles
-$ sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply maximousblk
+sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply maximousblk
