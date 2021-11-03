@@ -27,6 +27,7 @@ time_format = "%T"
 [hostname]
 format = "\\[ [$hostname](green) \\] "
 ssh_only = false
+trim_at = "_"
 
 [directory]
 style = "cyan"
