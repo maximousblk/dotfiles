@@ -1,21 +1,20 @@
 format = """
 $time\
 $hostname\
-$shlvl\
 $directory\
 $git_branch\
 $git_commit\
 $git_status\
 $git_state\
 $package\
-$golang\
-$python\
-$rust\
 $deno\
 $nodejs\
-$custom\
+$golang\
+$rust\
+$python\
 $cmd_duration\
 $status\
+$shlvl\
 $line_break\
 $character"""
 
@@ -27,9 +26,10 @@ time_format = "%T"
 [hostname]
 format = "\\[ [$hostname](green) \\] "
 ssh_only = false
-trim_at = "_"
 
 [directory]
+format = "[$read_only]($read_only_style)[$path]($style) "
+read_only = "🔒 "
 style = "cyan"
 truncation_length = 0
 
@@ -40,17 +40,21 @@ symbol = ""
 [python]
 format = "[${symbol}${pyenv_prefix}${version}( \\($virtualenv\\))]($style) "
 
+[golang]
+format = "$symbol[$version]($style) "
+version_format = "$raw"
+
 [deno]
 format = "$symbol[$version](green) "
-version_format = "${raw}"
 style = "green"
+version_format = "${raw}"
 
 [nodejs]
-detect_extensions = []
+detect_extensions = ["mjs", "cjs"]
 format = "$symbol [$version]($style) "
-version_format = "$raw"
-symbol = "node"
 style = "green"
+symbol = "node"
+version_format = "$raw"
 
 [shlvl]
 disabled = false
@@ -59,7 +63,14 @@ style = "red"
 
 [status]
 disabled = false
-format = "💣 [$status](red) "
+format = "$symbol [$status $common_meaning $signal_name](red) "
+map_symbol = true
+symbol = "💣"
+
+[cmd_duration]
+format = "⏱️ [$duration](bold yellow) "
+min_time = 5_000
+show_notifications = true
 
 [character]
 error_symbol = "[λ](red)"
