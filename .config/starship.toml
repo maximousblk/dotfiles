@@ -59,8 +59,8 @@ version_format = "$raw"
 
 [shlvl]
 disabled = false
-style = "red"
-symbol = "🌌 "
+style = "bright-blue"
+format = "\\[ [$shlvl]($style) \\] "
 
 [status]
 disabled = false
