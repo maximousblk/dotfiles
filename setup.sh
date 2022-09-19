@@ -1,6 +1,6 @@
 # Deno
 curl -fsSL https://deno.land/x/install/install.sh | sh
-curl -fsSL https://github.com/axetroy/dvm/raw/master/install.sh | sh
+curl -fsSL https://dvm.deno.dev | sh
 sudo ln -s /home/codespace/.deno/bin/deno /usr/bin # see https://github.com/denoland/vscode_deno/issues/234
 
 # NodeJS
@@ -12,7 +12,7 @@ nvm use --delete-prefix node
 curl -fsSL https://starship.rs/install.sh | sh -s -- --yes
 
 # croc
-curl -fsSL https://getcroc.schollz.com | sudo sh
+curl -fsSL https://getcroc.schollz.com | sudo bash
 
 # micro
 curl -fsSL https://getmic.ro | sh
