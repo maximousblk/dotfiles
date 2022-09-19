@@ -4,7 +4,7 @@ curl -fsSL https://dvm.deno.dev | sh
 sudo ln -s /home/codespace/.deno/bin/deno /usr/bin # see https://github.com/denoland/vscode_deno/issues/234
 
 # NodeJS
-curl -fsSL https://github.com/nvm-sh/nvm/raw/master/install.sh | sh
+curl -fsSL https://github.com/nvm-sh/nvm/raw/master/install.sh | bash
 nvm install node
 nvm use --delete-prefix node
 
